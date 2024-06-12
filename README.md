@@ -82,13 +82,13 @@ git status
 git log
 
 # nice log
-git log --graph --all --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
+git log --oneline --decorate --graph --all
 
 git checkout main
 echo "A change in main branch" >> hola.txt
 git commit -am 'Change in main'
 
-git log --graph --all --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
+git log --oneline --decorate --graph --all
 ```
 
 
