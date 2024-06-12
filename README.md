@@ -104,17 +104,102 @@ git merge
 
 
 
+## WORKING WITH REMOTE
+
+
+### Day 1 -- Clone
+
+```shell
+#check where we are
+pwd
+git clone git@github.com:Codesai/git-course-practices.git
+git log
+
+echo 'hello' > new-file.txt
+git add .
+git commit -m 'New file'
+
+git push
+```
 
 
 
+### Day 2 -- Pull
+
+```shell
+#check where we are
+pwd
+git clone git@github.com:Codesai/git-course-practices.git user1
+git clone git@github.com:Codesai/git-course-practices.git user2
+
+# user1 - push some changes
+
+cd user2
+git pull
+git log
+
+# or
+
+git fetch
+git merge
+```
+
+### Day 3 -- Diverge with Merge
+```shell
+# user1 push new changes 
+
+cd user2
+
+# add some changes & commit
+
+git push
+#rejected
+
+git pull
+
+# or
+
+git fetch
+git merge
+
+# then
+
+git push
+```
 
 
+### Day 4 -- Diverge with Rebase
+```shell
+# user1 push new changes 
 
+cd user2
 
+# add some changes & commit
 
+git push
+#rejected
 
+git fetch
+git rebase
 
+# then
 
+git push
+```
+
+### Day 5 -- Tag
+```shell
+git tag
+git tag v1.0
+git tag -a v1.1 -m 'v1.1'
+git show v1.0
+git show v1.1
+
+# push
+git push --tags
+#or
+git push origin v1.0
+```
 
 
 ## BASICS
