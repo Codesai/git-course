@@ -146,26 +146,68 @@ git push
 ```
 
 
+### Day 2 -- Pull changes from another user
 
-### Day 2 -- Pull
+#### Clone repo
+
+**Option A -- using a remote server**
 
 ```shell
-#check where we are
-pwd
+# Create a remote repo (i.e. In github.com) with some file
+
+# Clone repo for user1 and user2
 git clone git@github.com:Codesai/git-course-practices.git user1
 git clone git@github.com:Codesai/git-course-practices.git user2
+```
 
-# user1 - push some changes
 
-cd user2
+**Option B -- using a local server (trick)**
+
+```shell
+# Create a local repo (i.e. In github.com) with some file
+mkdir repo_server
+cd repo_server
+git init
+git config user.name "Server" && git config  user.email "server@codesai.com"
+git config receive.denyCurrentBranch ignore
+
+# Create some file and commit...
+echo "Hola mundo!" >> hola.txt
+git add .
+git commit -m 'Create first file'
+
+# Clone repo for user1 and user2 
+cd ..
+git clone repo_server user1
+git clone repo_server user2
+```
+
+#### Merge changes
+
+_**? Question:** Do we need to pull after clone?_
+
+```shell
+# user1 -- do some changes
+cd user1
+echo "User 1 interesting thing" >> hola.txt
+git commit -am 'User 1 Interesting thing'
+
+# user2 -- pull
+
 git pull
-git log
 
 # or
 
 git fetch
 git merge
+
+# or
+
+git rebase
 ```
+
+_tip1: https://es.lipsum.com/_
+
 
 ### Day 3 -- Diverge with Merge
 ```shell
