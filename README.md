@@ -128,11 +128,13 @@ git config core.editor "loved_editor"
 alias | grep git
 ```
 
-### Day 1 -- Clone
+
+### Day 1 -- Clone and Push
 
 ```shell
-#check where we are
+# Check where we are
 pwd
+
 git clone git@github.com:Codesai/git-course-practices.git
 git log
 
