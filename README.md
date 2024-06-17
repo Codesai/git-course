@@ -1,6 +1,6 @@
 # GIT Course
 
-Kind of guide for Git Course by [**Codesai**](www.codesai.com)
+Kind of guide for Git Course by [**Codesai**](https://www.codesai.com)
 
 
 ## Install Git
@@ -101,11 +101,32 @@ git merge
 ```
 
 
+## GIT BASIC COMMANDS -- some code
 
 
+### Setup
+
+**Option A: global**
+```shell
+git config --global user.name "Your name"
+git config --global user.email "email@dominio.com"
+git config --global core.editor "loved_editor"
+```
+
+**Option B: or local to this repo**
+```shell
+git config user.name "Your name"
+git config user.email "email@dominio.com"
+git config core.editor "loved_editor"
+```
 
 ## WORKING WITH REMOTE
 
+### Day 0 -- Alias
+
+```shell
+alias | grep git
+```
 
 ### Day 1 -- Clone
 
