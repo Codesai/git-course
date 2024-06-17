@@ -120,6 +120,11 @@ git config user.email "email@dominio.com"
 git config core.editor "loved_editor"
 ```
 
+**Option C: or a fancy one-liner** 
+```shell
+git config user.name "User" && git config  user.email "user@codesai.com"
+```
+
 ## WORKING WITH REMOTE
 
 ### Day 0 -- Alias
