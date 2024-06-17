@@ -265,24 +265,3 @@ git push --tags
 #or
 git push origin v1.0
 ```
-
-
-## BASICS
-
-
-### Setup
-
-Option A) global
-```shell
-git config --global user.name "Your name"
-git config --global user.email "email@dominio.com"
-git config --global core.editor "loved_editor"
-```
-
-Option b) or local to this repo 
-```shell
-git config user.name "Your name"
-git config user.email "email@dominio.com"
-git config core.editor "loved_editor"
-```
-
